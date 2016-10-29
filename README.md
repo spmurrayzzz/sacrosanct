@@ -1,5 +1,7 @@
 # sacrosanct
 
+[![Build Status](https://travis-ci.org/spmurrayzzz/sacrosanct.png?branch=master)](https://travis-ci.org/spmurrayzzz/sacrosanct)
+
 Module for creating immutable JavaScript objects using ES2015 Proxies.
 
 *Requires Node.js 6+*
