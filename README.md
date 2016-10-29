@@ -22,8 +22,8 @@ npm install sacrosanct
 ## Usage
 
 ```js
-const sacrosanct = require('sacrosanct');
-const frozen = sacrosanct({ cantChangeMe: true });
+const sacrosanct  = require('sacrosanct');
+const frozen      = sacrosanct({ cantChangeMe: true });
 
 frozen.cantChangeMe = false;
 
@@ -35,8 +35,10 @@ Just pass `true` as the second argument to turn on strict mode (for use in
 conjunction with `use strict`).
 
 ```js
-const sacrosanct = require('sacrosanct');
-const frozen = sacrosanct( { cantChangeMe: true }, true );
+'use strict';
+
+const sacrosanct  = require('sacrosanct');
+const frozen      = sacrosanct( { cantChangeMe: true }, true );
 
 frozen.cantChangeMe = false; // TypeError: 'set' on proxy: trap returned falsish for property 'cantChangeMe'
 ```
