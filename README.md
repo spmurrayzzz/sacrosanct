@@ -22,8 +22,8 @@ npm install sacrosanct
 ## Usage
 
 ```js
-const sacrosanct  = require('sacrosanct');
-const frozen      = sacrosanct({ cantChangeMe: true });
+const freeze      = require('sacrosanct');
+const frozen      = freeze({ cantChangeMe: true });
 
 frozen.cantChangeMe = false;
 
@@ -37,8 +37,8 @@ conjunction with `use strict`).
 ```js
 'use strict';
 
-const sacrosanct  = require('sacrosanct');
-const frozen      = sacrosanct( { cantChangeMe: true }, true );
+const freeze      = require('sacrosanct');
+const frozen      = freeze( { cantChangeMe: true }, true );
 
 frozen.cantChangeMe = false; // TypeError: 'set' on proxy: trap returned falsish for property 'cantChangeMe'
 ```
