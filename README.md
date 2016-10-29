@@ -31,7 +31,8 @@ console.log( frozen.cantChangeMe ); // true
 ```
 
 You can configure frozen objects to be noisy and throw on mutations as well.
-Just pass `true` as the second argument to turn on strict mode.
+Just pass `true` as the second argument to turn on strict mode (for use in
+conjunction with `use strict`).
 
 ```js
 const sacrosanct = require('sacrosanct');
