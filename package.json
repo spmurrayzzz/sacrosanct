@@ -1,6 +1,6 @@
 {
   "name": "sacrosanct",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Module for creating immutable JavaScript objects",
   "main": "index.js",
   "scripts": {
