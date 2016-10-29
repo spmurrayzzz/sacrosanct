@@ -13,6 +13,12 @@ as you pass them around. Great example of this would be for use in a redux-like
 application where application state should only be mutated by dispatching
 actions.
 
+## Installation
+
+```bash
+npm install sacrosanct
+```
+
 ## Usage
 
 ```js
