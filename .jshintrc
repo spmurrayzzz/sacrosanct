@@ -1,0 +1,18 @@
+{
+  "boss": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "funcscope": true,
+  "indent": 2,
+  "lastsemic": true,
+  "maxlen": 80,
+  "quotmark": "single",
+  "trailing": true,
+  "undef": true,
+  "unused": "vars",
+  "-W030": true,
+  "newcap": false,
+  "esversion": 6,
+  "node": true
+}
