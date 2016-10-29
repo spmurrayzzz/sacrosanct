@@ -2,6 +2,8 @@
 
 Module for creating immutable JavaScript objects using ES2015 Proxies.
 
+*Requires Node.js 6+*
+
 ## Why
 
 The purpose of this module is to protect shared objects from being mutated
