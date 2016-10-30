@@ -49,4 +49,12 @@ describe( 'lib/sacrosanct', () => {
     assert.throws( () => obj2.foo.bar = 'blah' );
   });
 
+  it( 'should throw on non-object types', () => {
+    let sacrosanct = getModule();
+
+    assert.throws( () => sacrosanct('foo') );
+    assert.throws( () => sacrosanct( 1 ) );
+    assert.throws( () => sacrosanct( true ) );
+  });
+
 });
