@@ -14,5 +14,8 @@
   "-W030": true,
   "newcap": false,
   "esversion": 6,
-  "node": true
+  "node": true,
+  "globals": {
+    "define": true
+  }
 }
