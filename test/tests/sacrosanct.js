@@ -57,4 +57,29 @@ describe( 'lib/sacrosanct', () => {
     assert.throws( () => sacrosanct( true ) );
   });
 
+  it( 'should not proxy non-writable, non-configurable properties', () => {
+    let sacrosanct = getModule();
+    let obj = { foo: [ 1, 2 ] };
+
+    let obj2 = sacrosanct( obj, true );
+
+    assert.doesNotThrow( () => {
+      obj2.foo.map( n => n * n );
+    });
+  });
+
+  it( 'should not proxy non-writable, non-configurable properties', () => {
+    let sacrosanct = getModule();
+    let obj = {};
+    Object.defineProperty( obj, 'foo', {
+      configurable: false, writable: false
+    });
+
+    let obj2 = sacrosanct( obj, true );
+
+    assert.doesNotThrow( () => {
+      obj2.foo;
+    });
+  });
+
 });
