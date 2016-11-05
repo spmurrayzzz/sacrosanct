@@ -6,12 +6,12 @@ Module for creating immutable JavaScript objects using ES2015 Proxies.
 
 *Requires Node.js 6+*
 
-## Why
+## Why?
 
 The purpose of this module is to protect shared objects from being mutated
 as you pass them around. Great example of this would be for use in a redux-like
 application where application state should only be mutated by dispatching
-actions.
+actions that ultimately return brand new states.
 
 ## Installation
 
