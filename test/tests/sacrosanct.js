@@ -57,7 +57,7 @@ describe( 'lib/sacrosanct', () => {
     assert.throws( () => sacrosanct( true ) );
   });
 
-  it( 'should not proxy non-writable, non-configurable properties', () => {
+  it( 'should not proxy non-writable, non-configurable properties (up the proto chain)', () => {
     let sacrosanct = getModule();
     let obj = { foo: [ 1, 2 ] };
 
@@ -72,7 +72,7 @@ describe( 'lib/sacrosanct', () => {
     let sacrosanct = getModule();
     let obj = {};
     Object.defineProperty( obj, 'foo', {
-      configurable: false, writable: false
+      configurable: false, writable: false, value: {}
     });
 
     let obj2 = sacrosanct( obj, true );
