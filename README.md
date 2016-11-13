@@ -15,7 +15,7 @@ only be mutated by dispatching actions that ultimately return brand new states.
 
 ## Wait, why not just use `Object.freeze()`?
 
-Of course! `Object.freeze()` would be appropriate for the use case that you
+You could! `Object.freeze()` would be appropriate for the use case that you
 had an object you wanted to freeze forever and never touch again. But what if
 you had an object that you wanted to be able to safely share with others, but
 also retain the ability to make runtime changes yourself? This is where using
