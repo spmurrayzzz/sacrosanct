@@ -9,9 +9,20 @@ Module for creating immutable JavaScript objects using ES2015 Proxies.
 ## Why?
 
 The purpose of this module is to protect shared objects from being mutated
-as you pass them around. Great example of this would be for use in a redux-like
-application where application state should only be mutated by dispatching
-actions that ultimately return brand new states.
+as you pass them around without freezing the original objects. Great example of
+this would be for use in a redux-like application where application state should
+only be mutated by dispatching actions that ultimately return brand new states.
+
+## Wait, why not just use `Object.freeze()`?
+
+Of course! `Object.freeze()` would be appropriate for the use case that you
+had an object you wanted to freeze forever and never touch again. But what if
+you had an object that you wanted to be able to safely share with others, but
+also retain the ability to make runtime changes yourself? This is where using
+`Proxy` comes into play. The original object passed into `sacrosanct()` remains
+mutable, thus allowing you to make whatever changes you'd like to the target
+object in your own module scope, while restricting access for others by
+exporting the returned frozen object.
 
 ## Installation
 
